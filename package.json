@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "tsc -b && vite build && node .\\scripts\\generateDataManager.js",
     "lint": "eslint .",
     "preview": "vite preview"
   },
@@ -13,6 +13,7 @@
     "@arco-design/web-react": "^2.65.0",
     "@visactor/react-vchart": "^1.13.5",
     "@visactor/vchart": "^1.13.5",
+    "@vitejs/plugin-legacy": "^6.0.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
