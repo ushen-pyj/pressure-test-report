@@ -1,22 +1,25 @@
 {
+    "name": "echarts",
     "desc": [
         {
           "label": "压测名称",
-          "value": "test",
-          "span": 5
+          "value": "test1",
+          "span": 12
         },
         {
           "label": "备注",
           "value": "123-1234-1234",
-          "span": 5
+          "span": 12
         },
         {
           "label": "压测时间",
-          "value": "2023-03-23 14:00:00"
+          "value": "2023-03-23 14:00:00",
+          "span": 6
         },
         {
           "label": "持续时间",
-          "value": "11111"
+          "value": "11111",
+          "span": 6
         },
         {
           "label": "线程数量",
@@ -67,26 +70,86 @@
           "threadID": 1
         }
       ],
-      "rttData": [
-        { "count": 1, "country": "ReqLogin", "value": 5 },
-        { "count": 1, "country": "ReqEnterGame", "value": 10 },
-        { "count": 10, "country": "ReqLogin", "value": 10 },
-        { "count": 10, "country": "ReqEnterGame", "value": 20 },
-        { "count": 20, "country": "ReqLogin", "value": 15 },
-        { "count": 20, "country": "ReqEnterGame", "value": 15 },
-        { "count": 30, "country": "ReqLogin", "value": 20 },
-        { "count": 30, "country": "ReqEnterGame", "value": 30 },
-        { "count": 40, "country": "ReqLogin", "value": 25 },
-        { "count": 40, "country": "ReqEnterGame", "value": 45 },
-        { "count": 50, "country": "ReqLogin", "value": 30 },
-        { "count": 50, "country": "ReqEnterGame", "value": 50 },
-        { "count": 60, "country": "ReqLogin", "value": 35 },
-        { "count": 60, "country": "ReqEnterGame", "value": 65 },
-        { "count": 70, "country": "ReqLogin", "value": 40 },
-        { "count": 70, "country": "ReqEnterGame", "value": 70 },
-        { "count": 80, "country": "ReqLogin", "value": 45 },
-        { "count": 80, "country": "ReqEnterGame", "value": 85 },
-        { "count": 100, "country": "ReqLogin", "value": 50 },
-        { "count": 100, "country": "ReqEnterGame", "value": 90 }
+      "charts": [
+        {
+          "type": "line",
+          "title": "响应时间图(单位ms)",
+          "data":[
+            { "count": 1, "country": "ReqLogin", "value": 5 },
+            { "count": 1, "country": "ReqEnterGame", "value": 10 },
+            { "count": 10, "country": "ReqLogin", "value": 10 },
+            { "count": 10, "country": "ReqEnterGame", "value": 20 },
+            { "count": 20, "country": "ReqLogin", "value": 15 },
+            { "count": 20, "country": "ReqEnterGame", "value": 15 },
+            { "count": 30, "country": "ReqLogin", "value": 20 },
+            { "count": 30, "country": "ReqEnterGame", "value": 30 },
+            { "count": 40, "country": "ReqLogin", "value": 25 },
+            { "count": 40, "country": "ReqEnterGame", "value": 45 },
+            { "count": 50, "country": "ReqLogin", "value": 30 },
+            { "count": 50, "country": "ReqEnterGame", "value": 50 },
+            { "count": 60, "country": "ReqLogin", "value": 35 },
+            { "count": 60, "country": "ReqEnterGame", "value": 65 },
+            { "count": 70, "country": "ReqLogin", "value": 40 },
+            { "count": 70, "country": "ReqEnterGame", "value": 70 },
+            { "count": 80, "country": "ReqLogin", "value": 45 },
+            { "count": 80, "country": "ReqEnterGame", "value": 85 },
+            { "count": 100, "country": "ReqLogin", "value": 50 },
+            { "count": 200, "country": "ReqEnterGame", "value": 200 }
+          ]
+        },
+        {
+          "type": "line",
+          "title": "平均响应时间图(单位ms)",
+          "data":[
+            { "count": 1, "country": "ReqLogin", "value": 5 },
+            { "count": 1, "country": "ReqEnterGame", "value": 10 },
+            { "count": 10, "country": "ReqLogin", "value": 10 },
+            { "count": 10, "country": "ReqEnterGame", "value": 20 },
+            { "count": 20, "country": "ReqLogin", "value": 15 },
+            { "count": 20, "country": "ReqEnterGame", "value": 15 },
+            { "count": 30, "country": "ReqLogin", "value": 20 },
+            { "count": 30, "country": "ReqEnterGame", "value": 30 },
+            { "count": 40, "country": "ReqLogin", "value": 25 },
+            { "count": 40, "country": "ReqEnterGame", "value": 45 },
+            { "count": 50, "country": "ReqLogin", "value": 30 },
+            { "count": 50, "country": "ReqEnterGame", "value": 50 },
+            { "count": 60, "country": "ReqLogin", "value": 35 },
+            { "count": 60, "country": "ReqEnterGame", "value": 65 },
+            { "count": 70, "country": "ReqLogin", "value": 40 },
+            { "count": 70, "country": "ReqEnterGame", "value": 70 },
+            { "count": 80, "country": "ReqLogin", "value": 45 },
+            { "count": 80, "country": "ReqEnterGame", "value": 85 },
+            { "count": 100, "country": "ReqLogin", "value": 50 },
+            { "count": 100, "country": "ReqEnterGame", "value": 90 }
+          ]
+        },
+        {
+          "type": "pie",
+          "title": "错误率图(单位%)",
+          "data": [
+            { "type": "oxygen", "value": "46.60" },
+            { "type": "silicon", "value": "27.72" },
+            { "type": "aluminum", "value": "8.13" },
+            { "type": "iron", "value": "5" },
+            { "type": "calcium", "value": "3.63" },
+            { "type": "sodium", "value": "2.83" },
+            { "type": "potassium", "value": "2.59" },
+            { "type": "others", "value": "3.5" }
+          ]
+        },
+        {
+          "type": "bar",
+          "title": "登陆玩家图",
+          "data": [
+            { "count": 1, "num": "46.60" },
+            { "count": 5, "num": "27.72" },
+            { "count": 10, "num": "8.13" },
+            { "count": 15, "num": "5" },
+            { "count": 20, "num": "3.63" },
+            { "count": 30, "num": "2.83" },
+            { "count": 40, "num": "2.59" },
+            { "count": 50, "num": "3.5" }
+          ]
+        }
       ]
 }

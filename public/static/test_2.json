@@ -67,26 +67,56 @@
           "threadID": 1
         }
       ],
-      "rttData": [
-        { "count": 1, "country": "ReqLogin", "value": 5 },
-        { "count": 1, "country": "ReqEnterGame", "value": 10 },
-        { "count": 10, "country": "ReqLogin", "value": 10 },
-        { "count": 10, "country": "ReqEnterGame", "value": 20 },
-        { "count": 20, "country": "ReqLogin", "value": 15 },
-        { "count": 20, "country": "ReqEnterGame", "value": 15 },
-        { "count": 30, "country": "ReqLogin", "value": 20 },
-        { "count": 30, "country": "ReqEnterGame", "value": 30 },
-        { "count": 40, "country": "ReqLogin", "value": 25 },
-        { "count": 40, "country": "ReqEnterGame", "value": 45 },
-        { "count": 50, "country": "ReqLogin", "value": 30 },
-        { "count": 50, "country": "ReqEnterGame", "value": 50 },
-        { "count": 60, "country": "ReqLogin", "value": 35 },
-        { "count": 60, "country": "ReqEnterGame", "value": 65 },
-        { "count": 70, "country": "ReqLogin", "value": 40 },
-        { "count": 70, "country": "ReqEnterGame", "value": 70 },
-        { "count": 80, "country": "ReqLogin", "value": 45 },
-        { "count": 80, "country": "ReqEnterGame", "value": 85 },
-        { "count": 100, "country": "ReqLogin", "value": 50 },
-        { "count": 100, "country": "ReqEnterGame", "value": 90 }
+      "charts": [
+        {
+          "title": "响应时间图(单位ms)",
+          "data":[
+            { "count": 1, "country": "ReqLogin", "value": 5 },
+            { "count": 1, "country": "ReqEnterGame", "value": 10 },
+            { "count": 10, "country": "ReqLogin", "value": 10 },
+            { "count": 10, "country": "ReqEnterGame", "value": 20 },
+            { "count": 20, "country": "ReqLogin", "value": 15 },
+            { "count": 20, "country": "ReqEnterGame", "value": 15 },
+            { "count": 30, "country": "ReqLogin", "value": 20 },
+            { "count": 30, "country": "ReqEnterGame", "value": 30 },
+            { "count": 40, "country": "ReqLogin", "value": 25 },
+            { "count": 40, "country": "ReqEnterGame", "value": 45 },
+            { "count": 50, "country": "ReqLogin", "value": 30 },
+            { "count": 50, "country": "ReqEnterGame", "value": 50 },
+            { "count": 60, "country": "ReqLogin", "value": 35 },
+            { "count": 60, "country": "ReqEnterGame", "value": 65 },
+            { "count": 70, "country": "ReqLogin", "value": 40 },
+            { "count": 70, "country": "ReqEnterGame", "value": 70 },
+            { "count": 80, "country": "ReqLogin", "value": 45 },
+            { "count": 80, "country": "ReqEnterGame", "value": 85 },
+            { "count": 100, "country": "ReqLogin", "value": 50 },
+            { "count": 100, "country": "ReqEnterGame", "value": 90 }
+          ]
+        },
+        {
+          "title": "平均响应时间图(单位ms)",
+          "data":[
+            { "count": 1, "country": "ReqLogin", "value": 5 },
+            { "count": 1, "country": "ReqEnterGame", "value": 10 },
+            { "count": 10, "country": "ReqLogin", "value": 10 },
+            { "count": 10, "country": "ReqEnterGame", "value": 20 },
+            { "count": 20, "country": "ReqLogin", "value": 15 },
+            { "count": 20, "country": "ReqEnterGame", "value": 15 },
+            { "count": 30, "country": "ReqLogin", "value": 20 },
+            { "count": 30, "country": "ReqEnterGame", "value": 30 },
+            { "count": 40, "country": "ReqLogin", "value": 25 },
+            { "count": 40, "country": "ReqEnterGame", "value": 45 },
+            { "count": 50, "country": "ReqLogin", "value": 30 },
+            { "count": 50, "country": "ReqEnterGame", "value": 50 },
+            { "count": 60, "country": "ReqLogin", "value": 35 },
+            { "count": 60, "country": "ReqEnterGame", "value": 65 },
+            { "count": 70, "country": "ReqLogin", "value": 40 },
+            { "count": 70, "country": "ReqEnterGame", "value": 70 },
+            { "count": 80, "country": "ReqLogin", "value": 45 },
+            { "count": 80, "country": "ReqEnterGame", "value": 85 },
+            { "count": 100, "country": "ReqLogin", "value": 50 },
+            { "count": 100, "country": "ReqEnterGame", "value": 90 }
+          ]
+        }
       ]
 }
