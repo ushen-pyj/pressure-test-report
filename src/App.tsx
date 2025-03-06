@@ -20,6 +20,8 @@ declare global {
   }
 }
 
+let currentValue: any = '';
+
 function App() {
   const [data, setData] = useState<any>({})
   const [testList, setTestList] = useState<any>({})
@@ -70,7 +72,10 @@ function App() {
   
       // 加载完成后更新数据
       loadTestList();
-      setColumns(window?.__TABLE_COLUMNS__?.data ?? []);
+      loadJsonData(currentValue)
+      if(JSON.stringify(data) !== JSON.stringify(window?.__TEST_DATA__[testList?.data[0].value])){
+        setColumns(window?.__TABLE_COLUMNS__?.data ?? []);
+      }
     } catch (error) {
       console.error('重新加载数据失败:', error);
     } finally{
@@ -103,6 +108,7 @@ function App() {
           defaultValue={testList?.data ? testList.data[0] : ""}
           onChange={(value) => {
             loadJsonData(value)
+            currentValue = value;
           }}
         />
         <Button loading={loading} icon={<IconRefresh />} onClick={()=>reload()}></Button>
