@@ -73,8 +73,8 @@
           "data":[
             { "count": 1, "country": "ReqLogin", "value": 5 },
             { "count": 1, "country": "ReqEnterGame", "value": 10 },
-            { "count": 10, "country": "ReqLogin", "value": 10 },
-            { "count": 10, "country": "ReqEnterGame", "value": 20 },
+            { "count": 10, "country": "ReqLogin", "value": 10000 },
+            { "count": 10, "country": "ReqEnterGame", "value": 2000 },
             { "count": 20, "country": "ReqLogin", "value": 15 },
             { "count": 20, "country": "ReqEnterGame", "value": 15 },
             { "count": 30, "country": "ReqLogin", "value": 20 },

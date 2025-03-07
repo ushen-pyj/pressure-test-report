@@ -20,13 +20,13 @@ declare global {
   }
 }
 
-let currentValue: any = '';
 
 function App() {
   const [data, setData] = useState<any>({})
   const [testList, setTestList] = useState<any>({})
   const [columns, setColumns] = useState<any>([])
   const [loading, setLoading] = useState<boolean>(false)
+  const [selectValue, setSelectValue] = useState<any>("")
   
   const loadJsonData = async (value: string) => {
     try {
@@ -72,7 +72,6 @@ function App() {
   
       // 加载完成后更新数据
       loadTestList();
-      loadJsonData(currentValue)
       if(JSON.stringify(data) !== JSON.stringify(window?.__TEST_DATA__[testList?.data[0].value])){
         setColumns(window?.__TABLE_COLUMNS__?.data ?? []);
       }
@@ -86,18 +85,23 @@ function App() {
   };
 
   useEffect(() => {
+    loadJsonData(selectValue)
+  }, [selectValue])
+
+  useEffect(() => {
     load()
-    setInterval(() => {
-      reload()
-    }, 5000)
+    // setInterval(() => {
+    //   reload()
+    // }, 5000)
   }, [])
 
   useEffect(() => {
     if(testList?.data?.length > 0) {
-      loadJsonData(testList?.data[0].value)
+      if(selectValue === "") {
+        setSelectValue(testList?.data[0].value)
+      }
     }
   }, [testList])
-  
   return (
     <>
       <Space>
@@ -105,10 +109,9 @@ function App() {
           style={{ width: 800 }}
           placeholder="选择一个报告"
           options={testList?.data ?? []}
-          defaultValue={testList?.data ? testList.data[0] : ""}
+          value={selectValue}
           onChange={(value) => {
-            loadJsonData(value)
-            currentValue = value;
+            setSelectValue(value)
           }}
         />
         <Button loading={loading} icon={<IconRefresh />} onClick={()=>reload()}></Button>

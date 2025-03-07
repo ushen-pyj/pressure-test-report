@@ -19,7 +19,7 @@ const RTTCard = ({ data, title }: any) => {
       const filterData = data.filter((item: any) => item.count >= value[0] && item.count <= value[1])
       setRenderData(filterData)
     }
-  }, [value])
+  }, [value, data])
 
   const spec: any = {
     type: "line",

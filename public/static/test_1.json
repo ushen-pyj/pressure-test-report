@@ -75,7 +75,7 @@
           "type": "line",
           "title": "响应时间图(单位ms)",
           "data":[
-            { "count": 1, "country": "ReqLogin", "value": 5 },
+            { "count": 1, "country": "ReqLogin", "value": 522 },
             { "count": 1, "country": "ReqEnterGame", "value": 10 },
             { "count": 10, "country": "ReqLogin", "value": 10 },
             { "count": 10, "country": "ReqEnterGame", "value": 20 },
