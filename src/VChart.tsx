@@ -12,7 +12,7 @@ const RTTCard = ({ data, title }: any) => {
       const min = Math.min(...data.map((item: any) => item.count))
       setValue([min, max])
     }
-  }, [])
+  }, [data])
 
   useEffect(() => {
     if(data.length > 0){

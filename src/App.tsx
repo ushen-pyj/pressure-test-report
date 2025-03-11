@@ -31,7 +31,7 @@ function App() {
   const loadJsonData = async (value: string) => {
     try {
       if(JSON.stringify(data) === JSON.stringify(window?.__TEST_DATA__[value])) return
-      setData(window?.__TEST_DATA__[value] ?? {})
+      setData({...window?.__TEST_DATA__[value] ?? {}})
     } catch (error) {
       console.error('加载JSON文件时出错:', error);
     }
@@ -40,7 +40,18 @@ function App() {
   const loadTestList = async () => {
     try {
       if(JSON.stringify(testList) === JSON.stringify(window?.__TEST_LIST__)) return
-      setTestList(window?.__TEST_LIST__ ?? {})
+      let newTestList = window?.__TEST_LIST__ ?? {}
+      if(newTestList?.data){
+        newTestList?.data.sort((a: any, b: any)=>{
+          const dataA = window?.__TEST_DATA__[a.value]
+          const dataB = window?.__TEST_DATA__[b.value]
+          if(dataA && dataB){
+            return (dataB.updateAt ?? 0) - (dataA.updateAt ?? 0)
+          }
+          return -1
+        })
+      }
+      setTestList({...newTestList})
     } catch (error) {
       console.error('加载JSON文件时出错:', error);
     }
@@ -75,6 +86,7 @@ function App() {
       if(JSON.stringify(data) !== JSON.stringify(window?.__TEST_DATA__[testList?.data[0].value])){
         setColumns(window?.__TABLE_COLUMNS__?.data ?? []);
       }
+      loadJsonData(selectValue)
     } catch (error) {
       console.error('重新加载数据失败:', error);
     } finally{
@@ -102,6 +114,7 @@ function App() {
       }
     }
   }, [testList])
+
   return (
     <>
       <Space>
